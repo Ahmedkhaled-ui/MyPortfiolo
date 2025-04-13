@@ -11,37 +11,37 @@ import { Iprojects } from '../../shared/interfaces/iprojects';
 export class SkillsComponent {
   project: Iprojects[] = [
     {
-      image: '/image/e-com.png',
+      image: '/image/e-com_1.webp',
       title: '',
       subtitle: '',
     },
     {
-      image: '/image/f-com.JPG',
+      image: '/image/f-com.webp',
       title: '',
       subtitle: '',
     },
     {
-      image: '/image/elmulim.JPG',
+      image: '/image/elmulim.webp',
       title: '',
       subtitle: '',
     },
     {
-      image: '/image/games.JPG',
+      image: '/image/games.webp',
       title: '',
       subtitle: '',
     },
     {
-      image: '/image/weather.JPG',
+      image: '/image/weather.webp',
       title: '',
       subtitle: '',
     },
     {
-      image: '/image/porti.JPG',
+      image: '/image/porti.webp',
       title: '',
       subtitle: '',
     },
     {
-      image: '/image/book.JPG',
+      image: '/image/book.webp',
       title: '',
       subtitle: '',
     },
