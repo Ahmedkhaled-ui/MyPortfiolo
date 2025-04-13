@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f2f5f9;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Releway/static/Raleway-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("/fonts/pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+.liner::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 3px;
+  top: 55px;
+  left: 35%;
+  @apply bg-gradient-to-l from-red to-orange;
+}
+
+@media (max-width: 640px) {
+  .liner::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    top: 55px;
+    left: 55%;
+    @apply bg-gradient-to-l from-red to-orange;
+  }
+}

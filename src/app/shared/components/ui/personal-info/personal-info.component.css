@@ -1,0 +1,12 @@
+/* Vector */
+.vector {
+  width: 10.42px;
+  height: 19.84px;
+
+  background: #1877f2;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
