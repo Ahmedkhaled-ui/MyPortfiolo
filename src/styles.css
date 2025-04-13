@@ -39,7 +39,7 @@ body {
   .liner::before {
     content: "";
     position: absolute;
-    width: 180px;
+    width: 150px;
     height: 3px;
     top: 55px;
     left: 55%;
