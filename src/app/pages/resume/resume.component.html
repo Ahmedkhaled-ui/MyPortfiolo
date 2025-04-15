@@ -1,9 +1,11 @@
 <section class="bg-white relative">
-  <div class="p-5">
-    <h1 class="font-medium text-[40px] font-Poppins mb-5 liner">Resume</h1>
+  <div [@animated] class="p-5">
+    <h1 class="font-medium animation text-[40px] font-Poppins mb-5 liner">
+      Resume
+    </h1>
 
     <div class="grid grid-cols-2 gap-3">
-      <div class="flex gap-x-2 items-center">
+      <div class="flex gap-x-2 animation1 items-center">
         <span
           ><svg
             width="28"
@@ -53,7 +55,7 @@
         </span>
         <h1 class="font-Poppins font-bold text-[28px]">Education</h1>
       </div>
-      <div class="flex gap-x-2 items-center">
+      <div class="flex gap-x-2 animation1 items-center">
         <span>
           <svg
             width="29"
@@ -120,12 +122,15 @@
     </div>
     <div class="grid grid-cols-2 md:gap-10 gap-5 mt-5">
       @for (item of data; track $index) {
-      <app-cart
-        [color]="item.color"
-        [desc]="item.desc"
-        [head]="item.head"
-        [date]="item.date"
-      ></app-cart>
+      <div class="animation2">
+        <app-cart
+          [color]="item.color"
+          [desc]="item.desc"
+          [head]="item.head"
+          [date]="item.date"
+        ></app-cart>
+      </div>
+
       }
     </div>
   </div>

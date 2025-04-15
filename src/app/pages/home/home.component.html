@@ -1,28 +1,33 @@
-<section class="bg-white rounded-2xl p-5 mb-10 relative">
-  <h1 class="font-medium text-[40px] font-Poppins mb-5 liner">ABOUT ME</h1>
-  <p class="font-medium font-Raleway text-[16px] leading-[30px]">
-    Hello and welcome to my portfolio! I’m a passionate and versatile Front-End
-    Developer with hands-on experience in building modern, responsive, and
-    high-performance web applications using Angular and vanilla JavaScript. I
-    focus on creating clean, scalable code and delivering smooth user
-    experiences across all devices. I have a solid understanding of responsive
-    design principles, UI/UX best practices, and real-world problem-solving in
-    the front-end world. Currently, I’m expanding my skill set by diving into
-    Back-End Development, with the goal of becoming a well-rounded Full-Stack
-    Developer. I'm always excited to learn new technologies, explore performance
-    optimizations, and stay up-to-date with the latest trends in web
-    development. If you're looking for someone who’s detail-oriented,
-    fast-learning, and truly enjoys turning ideas into functional interfaces —
-    you’re in the right place.
-  </p>
-  <h2 class="font-medium text-[40px] font-Poppins mt-5 mb-5">What I do!</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    @for (item of data; track $index) {
-    <app-cart
-      [head]="item.head"
-      [desc]="item.desc"
-      [color]="item.color"
-    ></app-cart>
-    }
+<section>
+  <div [@animated] class="bg-white rounded-2xl p-5 mb-10 relative">
+    <h1 class="font-medium animation text-[40px] font-Poppins mb-5 liner">
+      ABOUT ME
+    </h1>
+    <p class="font-medium animation1 font-Raleway text-[16px] leading-[30px]">
+      Hello and welcome to my portfolio! I’m a passionate and versatile
+      Front-End Developer with hands-on experience in building modern,
+      responsive, and high-performance web applications using Angular and
+      vanilla JavaScript. I focus on creating clean, scalable code and
+      delivering smooth user experiences across all devices. I have a solid
+      understanding of responsive design principles, UI/UX best practices, and
+      real-world problem-solving in the front-end world. Currently, I’m
+      expanding my skill set by diving into Back-End Development, with the goal
+      of becoming a well-rounded Full-Stack Developer. I'm always excited to
+      learn new technologies, explore performance optimizations, and stay
+      up-to-date with the latest trends in web development. If you're looking
+      for someone who’s detail-oriented, fast-learning, and truly enjoys turning
+      ideas into functional interfaces — you’re in the right place.
+    </p>
+
+    <h2 class="font-medium text-[40px] font-Poppins mt-5 mb-5">What I do!</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      @for (item of data; track $index) {
+      <app-cart
+        [head]="item.head"
+        [desc]="item.desc"
+        [color]="item.color"
+      ></app-cart>
+      }
+    </div>
   </div>
 </section>

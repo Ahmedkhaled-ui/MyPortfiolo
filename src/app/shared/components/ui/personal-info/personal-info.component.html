@@ -1,59 +1,61 @@
-<section
-  class="bg-white hidden lg:flex p-3 mb-10 rounded-2xl flex-col justify-center"
->
-  <div class="text-center">
-    <h1 class="font-bold text-[20px] pt-10">Ahmed khaled mohamed</h1>
-    <h2 class="text-gray-400 font-bold text-[14px]">front ent developer</h2>
-  </div>
-  <div class="space-x-5 text-center mt-5">
-    @for (item of socail; track $index) {
-    <a target="_blank" [href]="item.link">
-      <i
-        [style]="{ color: item.color }"
-        [class]="item.color"
-        class="pi {{ item.icon }} bg-[#F2F7FC] p-3 rounded-2xl "
-        style="font-size: 1.5rem"
-      ></i> </a
-    >}
-  </div>
-  <div class="bg-[#F2F5F9] rounded-2xl p-2 px-10 mt-10">
-    <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
-      <span>
-        <i
-          style="font-size: 1.5rem"
-          class="pi pi-mobile from-orange bg-clip-text text-transparent from-30% bg-gradient-to-t to-red"
-        ></i>
-      </span>
-      <div>
-        <p class="text-[14px] text-gray-500 font-medium">phone</p>
-        <p class="font-bold">01124460598</p>
-      </div>
-    </div>
-    <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
-      <span>
-        <i style="font-size: 1.5rem" class="pi pi-envelope text-orange"></i>
-      </span>
-      <div>
-        <p class="text-[14px] capitalize text-gray-500 font-medium">email</p>
-        <p class="font-bold text-[12px]">{{ email }}</p>
-      </div>
-    </div>
-    <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
-      <span>
-        <i style="font-size: 1.5rem" class="pi pi-map-marker text-red"></i>
-      </span>
-      <div>
-        <p class="text-[14px] text-gray-500 font-medium">Location</p>
-        <p class="font-bold capitalize">egypt , cairo , helwan</p>
-      </div>
-    </div>
-  </div>
-  <button
-    (click)="downloadCV()"
-    class="bg-gradient-to-l mt-5 from-red self-center to-orange py-4 px-8 font-bold font-Poppins text-white capitalize rounded-3xl"
+<section [@personalAnimation] class="">
+  <div
+    class="hidden bg-white animate lg:flex p-3 mb-10 rounded-2xl flex-col justify-center"
   >
-    <i class="pi pi-download mx-2"></i>
+    <div class="text-center">
+      <h1 class="font-bold text-[20px] pt-10">Ahmed khaled mohamed</h1>
+      <h2 class="text-gray-400 font-bold text-[14px]">front ent developer</h2>
+    </div>
+    <div class="space-x-5 text-center mt-5">
+      @for (item of socail; track $index) {
+      <a target="_blank" [href]="item.link">
+        <i
+          [style]="{ color: item.color }"
+          [class]="item.color"
+          class="pi {{ item.icon }} bg-[#F2F7FC] p-3 rounded-2xl "
+          style="font-size: 1.5rem"
+        ></i> </a
+      >}
+    </div>
+    <div class="bg-[#F2F5F9] rounded-2xl p-2 px-10 mt-10">
+      <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
+        <span>
+          <i
+            style="font-size: 1.5rem"
+            class="pi pi-mobile from-orange bg-clip-text text-transparent from-30% bg-gradient-to-t to-red"
+          ></i>
+        </span>
+        <div>
+          <p class="text-[14px] text-gray-500 font-medium">phone</p>
+          <p class="font-bold">01124460598</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
+        <span>
+          <i style="font-size: 1.5rem" class="pi pi-envelope text-orange"></i>
+        </span>
+        <div>
+          <p class="text-[14px] capitalize text-gray-500 font-medium">email</p>
+          <p class="font-bold text-[12px]">{{ email }}</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
+        <span>
+          <i style="font-size: 1.5rem" class="pi pi-map-marker text-red"></i>
+        </span>
+        <div>
+          <p class="text-[14px] text-gray-500 font-medium">Location</p>
+          <p class="font-bold capitalize">egypt , cairo , helwan</p>
+        </div>
+      </div>
+    </div>
+    <button
+      (click)="downloadCV()"
+      class="bg-gradient-to-l mt-5 from-red self-center to-orange py-4 px-8 font-bold font-Poppins text-white capitalize rounded-3xl"
+    >
+      <i class="pi pi-download mx-2"></i>
 
-    download resume
-  </button>
+      download resume
+    </button>
+  </div>
 </section>

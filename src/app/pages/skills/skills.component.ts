@@ -1,12 +1,32 @@
 import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { Iprojects } from '../../shared/interfaces/iprojects';
+import {
+  animate,
+  query,
+  stagger,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-skills',
   imports: [CardModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
+  animations: [
+    trigger('skillAnimation', [
+      transition(':enter', [
+        query('.animation', [
+          style({ opacity: 0, transform: ' scale(0%)   ' }),
+          stagger('300ms ease-out', [
+            animate(1000, style({ opacity: 1, transform: 'scale(100%)   ' })),
+          ]),
+        ]),
+      ]),
+    ]),
+  ],
 })
 export class SkillsComponent {
   project: Iprojects[] = [

@@ -7,6 +7,7 @@
 
 body {
   background-color: #f2f5f9;
+  overflow: hidden;
 }
 @font-face {
   font-family: "Poppins";
@@ -43,6 +44,7 @@ body {
     height: 3px;
     top: 55px;
     left: 55%;
+
     @apply bg-gradient-to-l from-red to-orange;
   }
 }

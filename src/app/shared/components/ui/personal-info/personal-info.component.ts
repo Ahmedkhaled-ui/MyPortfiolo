@@ -1,11 +1,34 @@
 import { Component } from '@angular/core';
 import { Ilinks } from '../../../interfaces/ilinks';
-
+import {
+  animate,
+  query,
+  stagger,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 @Component({
   selector: 'app-personal-info',
   imports: [],
   templateUrl: './personal-info.component.html',
   styleUrl: './personal-info.component.css',
+  animations: [
+    trigger('personalAnimation', [
+      transition(':enter', [
+        query(
+          '.animate',
+          [
+            style({ opacity: 0, transform: 'scale(0%)' }),
+            stagger('300ms ease-out', [
+              animate(1500, style({ opacity: 1, transform: 'scale(100%)' })),
+            ]),
+          ],
+          { optional: true }
+        ),
+      ]),
+    ]),
+  ],
 })
 export class PersonalInfoComponent {
   socail: Ilinks[] = [

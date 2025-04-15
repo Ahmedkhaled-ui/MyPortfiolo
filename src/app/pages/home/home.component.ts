@@ -1,14 +1,49 @@
-import { Component, input } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  input,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { CartComponent } from '../../shared/components/ui/cart/cart.component';
 import { Ido } from '../../shared/interfaces/ido';
-
+import {
+  trigger,
+  transition,
+  style,
+  animate,
+  query,
+  stagger,
+  group,
+} from '@angular/animations';
 @Component({
   selector: 'app-home',
   imports: [ButtonModule, PasswordModule, CartComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  animations: [
+    trigger('animated', [
+      transition(':enter', [
+        group([
+          query('.animation1', [
+            style({ opacity: 0, transform: 'translateY(200px)' }),
+            stagger('0ms ease-out', [
+              animate(500, style({ opacity: 1, transform: 'translateY(0)' })),
+            ]),
+          ]),
+          query('.animation', [
+            style({ opacity: 1, transform: 'translateX(200px)' }),
+            stagger('300ms ease-out', [
+              animate(500, style({ opacity: 1, transform: 'translateX(0)' })),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
+  ],
 })
 export class HomeComponent {
   data: Ido[] = [

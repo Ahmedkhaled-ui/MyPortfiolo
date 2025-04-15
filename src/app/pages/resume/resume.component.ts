@@ -2,12 +2,46 @@ import { Component } from '@angular/core';
 import { CartComponent } from '../../shared/components/ui/cart/cart.component';
 import { Ido } from '../../shared/interfaces/ido';
 import { IworkSkills } from '../../shared/interfaces/iwork-skills';
-
+import {
+  transition,
+  trigger,
+  group,
+  query,
+  style,
+  stagger,
+  animate,
+} from '@angular/animations';
 @Component({
   selector: 'app-resume',
   imports: [CartComponent],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.css',
+  animations: [
+    trigger('animated', [
+      transition(':enter', [
+        group([
+          query('.animation2', [
+            style({ opacity: 0, transform: 'translateY(200px)' }),
+            stagger('200ms ease-out', [
+              animate(500, style({ opacity: 1, transform: 'translateY(0)' })),
+            ]),
+          ]),
+          query('.animation1', [
+            style({ opacity: 0, transform: 'translateY(-200px)' }),
+            stagger('200ms ease-out', [
+              animate(500, style({ opacity: 1, transform: 'translateY(0)' })),
+            ]),
+          ]),
+          query('.animation', [
+            style({ opacity: 0, transform: 'translateX(200px)' }),
+            stagger('300ms ease-out', [
+              animate(500, style({ opacity: 1, transform: 'translateX(0)' })),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
+  ],
 })
 export class ResumeComponent {
   data: Ido[] = [
