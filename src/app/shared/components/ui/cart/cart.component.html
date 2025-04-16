@@ -1,6 +1,14 @@
-<section [style]="{ background: color }" class="py-4 md:px-5 px-1 rounded-2xl">
+<section
+  [style.background-color]="isDarkMode() ? darkColor : color"
+  class="py-4 md:px-5 px-1 rounded-2xl"
+>
   <div>
-    <p class="mb-1 text-gray-600 text-[12px] md:text-[14px]">{{ date }}</p>
+    <p
+      [style.color]="isDarkMode() ? color : darkColor"
+      class="mb-1 text-gray-600 text-[12px] md:text-[14px]"
+    >
+      {{ date }}
+    </p>
     <h1 class="font-Poppins font-semibold text-[20px] md:text-[20px] mb-2">
       {{ head }}
     </h1>

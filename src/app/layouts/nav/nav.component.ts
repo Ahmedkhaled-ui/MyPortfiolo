@@ -1,4 +1,5 @@
 import {
+  afterNextRender,
   AfterViewInit,
   ChangeDetectorRef,
   Component,
@@ -23,9 +24,9 @@ import {
     trigger('Animation', [
       transition(':enter', [
         query('.animation', [
-          style({ opacity: 0, transform: ' scale(0%)   ' }),
+          style({ opacity: 0, transform: ' scale(1000%)   ' }),
           stagger('100ms ease-out', [
-            animate(500, style({ opacity: 1, transform: 'scale(100%)   ' })),
+            animate(1000, style({ opacity: 1, transform: 'scale(100%)   ' })),
           ]),
         ]),
       ]),
@@ -34,11 +35,39 @@ import {
 })
 export class NavComponent implements AfterViewInit {
   animationState: WritableSignal<string> = signal<'start' | ' in'>('start');
-  constructor(private changeDetectorRef: ChangeDetectorRef) {}
+  thems: WritableSignal<string> = signal('');
+  constructor(private changeDetectorRef: ChangeDetectorRef) {
+    afterNextRender(() => {
+      this.thems.set(localStorage.getItem('theme')!);
+      console.log(this.thems());
+    });
+  }
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.animationState.set('in');
       this.changeDetectorRef.detectChanges();
     });
+  }
+  mode() {
+    this.thems.set('dark');
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.classList.toggle(
+      'dark',
+      localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+    );
+  }
+
+  ligthMode() {
+    this.thems.set('ligth');
+
+    localStorage.setItem('theme', 'ligth');
+    document.documentElement.classList.toggle(
+      'dark',
+      localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+    );
   }
 }

@@ -1,6 +1,10 @@
-<section class="bg-white flex p-3 mb-10 rounded-2xl flex-col justify-center">
+<section
+  class="bg-white dark:bg-slate-900 flex p-3 mb-10 rounded-2xl flex-col justify-center"
+>
   <div class="text-center">
-    <h1 class="font-bold text-[20px] pt-10">Ahmed khaled mohamed</h1>
+    <h1 class="font-bold text-[20px] dark:text-white pt-10">
+      Ahmed khaled mohamed
+    </h1>
     <h2 class="text-gray-400 font-bold text-[14px]">front ent developer</h2>
   </div>
   <div class="space-x-5 text-center mt-5">
@@ -9,13 +13,17 @@
       <i
         [style]="{ color: item.color }"
         [class]="item.color"
-        class="pi {{ item.icon }} bg-[#F2F7FC] p-3 rounded-2xl "
+        class="pi {{
+          item.icon
+        }} bg-[#F2F7FC] dark:bg-slate-800 p-3 rounded-2xl "
         style="font-size: 1.5rem"
       ></i> </a
     >}
   </div>
-  <div class="bg-[#F2F5F9] rounded-2xl p-2 px-10 mt-10">
-    <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
+  <div class="bg-[#F2F5F9] dark:bg-slate-800 rounded-2xl p-2 px-10 mt-10">
+    <div
+      class="flex items-center gap-x-5 border-b-2 dark:border-slate-500 pb-3 mb-5"
+    >
       <span>
         <i
           style="font-size: 1.5rem"
@@ -23,26 +31,40 @@
         ></i>
       </span>
       <div>
-        <p class="text-[14px] text-gray-500 font-medium">phone</p>
-        <p class="font-bold">01124460598</p>
+        <p class="text-[14px] text-gray-500 font-medium dark:text-white">
+          phone
+        </p>
+        <p class="font-bold dark:text-slate-400">01124460598</p>
       </div>
     </div>
-    <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
+    <div
+      class="flex items-center gap-x-5 border-b-2 dark:border-slate-500 pb-3 mb-5"
+    >
       <span>
         <i style="font-size: 1.5rem" class="pi pi-envelope text-orange"></i>
       </span>
       <div>
-        <p class="text-[14px] capitalize text-gray-500 font-medium">email</p>
-        <p class="font-bold text-[12px]">{{ email }}</p>
+        <p
+          class="text-[14px] capitalize text-gray-500 font-medium dark:text-white"
+        >
+          email
+        </p>
+        <p class="font-bold text-[15px] dark:text-slate-400">{{ email }}</p>
       </div>
     </div>
-    <div class="flex items-center gap-x-5 border-b-2 pb-3 mb-5">
+    <div
+      class="flex items-center gap-x-5 border-b-2 dark:border-slate-500 pb-3 mb-5"
+    >
       <span>
         <i style="font-size: 1.5rem" class="pi pi-map-marker text-red"></i>
       </span>
       <div>
-        <p class="text-[14px] text-gray-500 font-medium">Location</p>
-        <p class="font-bold capitalize">egypt , cairo , helwan</p>
+        <p class="text-[14px] text-gray-500 font-medium dark:text-white">
+          Location
+        </p>
+        <p class="font-bold capitalize text-[15px] dark:text-slate-400">
+          egypt , cairo , helwan
+        </p>
       </div>
     </div>
   </div>

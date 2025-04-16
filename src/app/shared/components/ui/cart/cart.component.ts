@@ -1,4 +1,11 @@
-import { Component, Input, input } from '@angular/core';
+import {
+  afterNextRender,
+  Component,
+  Input,
+  input,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -11,4 +18,9 @@ export class CartComponent {
   @Input() 'desc': string;
   @Input() 'date': string | undefined;
   @Input() 'color': string;
+  @Input() 'darkColor': string;
+
+  isDarkMode(): boolean {
+    return document.documentElement.classList.contains('dark');
+  }
 }

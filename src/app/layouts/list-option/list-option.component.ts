@@ -24,8 +24,8 @@ import {
     trigger('navAnimated', [
       transition('* => in', [
         query('.test', [
-          style({ opacity: 0, transform: 'translateY(-100px)' }),
-          stagger('500ms ease-out', [
+          style({ opacity: 0, transform: 'translateY(-50px)' }),
+          stagger('300ms ease-out', [
             animate(300, style({ opacity: 1, transform: 'translateY(0)' })),
           ]),
         ]),

@@ -21,7 +21,7 @@ import {
         query('.animation', [
           style({ opacity: 0, transform: ' scale(0%)   ' }),
           stagger('300ms ease-out', [
-            animate(1000, style({ opacity: 1, transform: 'scale(100%)   ' })),
+            animate(500, style({ opacity: 1, transform: 'scale(100%)   ' })),
           ]),
         ]),
       ]),

@@ -1,22 +1,26 @@
 <section>
   <div
     [@navAnimated]="animationState()"
-    class="p-3 bordre-2 bg-white gap-x-3 rounded-2xl flex md:gap-x-10 mt-10 border-[1px] shadow"
+    class="p-3 bordre-2 bg-white dark:bg-slate-900 dark:border-slate-600 gap-x-3 rounded-2xl flex md:gap-x-10 mt-10 border-[1px] shadow"
   >
     @for (item of navItem; track $index) {
     <a
       [routerLink]="item.rout"
-      routerLinkActive="from-red bg-gradient-to-l to-orange text-white"
+      routerLinkActive="from-red bg-gradient-to-l to-orange text-white dark:text-white"
       role="button"
-      class="bg-gray-200 group test hover:from-red hover:bg-gradient-to-l hover:to-orange border-[1px] rounded-2xl p-3 md:px-5 flex flex-col gap-y-1 items-center justify-between"
+      class="bg-gray-200 dark:bg-slate-800 group test hover:from-red hover:bg-gradient-to-l hover:to-orange border-[1px] dark:border-slate-500 rounded-2xl p-3 md:px-5 flex flex-col gap-y-1 items-center justify-between"
     >
       <i
         [routerLink]="item.rout"
-        routerLinkActive="text-white"
-        class="pi {{ item.icon }}  group-hover:text-white  "
+        routerLinkActive="text-white dark:text-white"
+        class="pi {{
+          item.icon
+        }}  group-hover:text-white  dark:hover:text-slate-400 dark:text-slate-400 "
         style="font-size: 1rem"
       ></i>
-      <p class="capitalize text-[14px] font-Poppins group-hover:text-white">
+      <p
+        class="capitalize text-[14px] font-Poppins group-hover:text-white dark:hover:text-slate-400"
+      >
         {{ item.name }}
       </p>
     </a>

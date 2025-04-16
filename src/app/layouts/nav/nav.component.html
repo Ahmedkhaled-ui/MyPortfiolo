@@ -2,17 +2,28 @@
   [@Animation]
   class="container w-[90%] md:w-full flex items-center justify-between pt-3"
 >
-  <h1 class="text-[24px] animation font-Pacifico font-bold">
+  <h1 class="text-[24px] animation font-Pacifico font-bold dark:text-white">
     ahmed
     <span
       class="font-Pacifico from-red bg-gradient-to-l to-orange bg-clip-text text-transparent"
       >khaled</span
     >
   </h1>
-  <i
-    class="pi pi-moon p-2 animation border-[1px] rounded-full"
-    style="font-size: 1rem"
-  ></i>
+  @if (thems() == 'ligth') {
+  <div role="button" (click)="mode()">
+    <i
+      class="pi pi-moon p-2 animation dark:text-white border-[1px] rounded-full"
+      style="font-size: 1rem"
+    ></i>
+  </div>
+  }@else {
+  <div role="button" (click)="ligthMode()">
+    <i
+      class="pi pi-sun p-2 animation dark:text-white border-[1px] rounded-full"
+      style="font-size: 1rem"
+    ></i>
+  </div>
+  }
 </section>
 <section class="flex justify-center md:justify-end mb-5">
   <app-list-option></app-list-option>
