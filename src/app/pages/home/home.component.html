@@ -9,22 +9,44 @@
       ABOUT ME
     </h1>
     <p
-      class="font-medium animation1 dark:text-slate-300 font-Raleway text-[16px] leading-[30px]"
+      class="font-medium animation1 inline dark:text-slate-300 font-Raleway text-[16px] md:text-[18px] leading-[30px]"
     >
       Hello and welcome to my portfolio! I’m a passionate and versatile
       Front-End Developer with hands-on experience in building modern,
       responsive, and high-performance web applications using Angular and
       vanilla JavaScript. I focus on creating clean, scalable code and
-      delivering smooth user experiences across all devices. I have a solid
-      understanding of responsive design principles, UI/UX best practices, and
-      real-world problem-solving in the front-end world. Currently, I’m
-      expanding my skill set by diving into Back-End Development, with the goal
-      of becoming a well-rounded Full-Stack Developer. I'm always excited to
-      learn new technologies, explore performance optimizations, and stay
-      up-to-date with the latest trends in web development. If you're looking
-      for someone who’s detail-oriented, fast-learning, and truly enjoys turning
-      ideas into functional interfaces — you’re in the right place.
+      delivering smooth user experiences across all devices. @if (!readMore) {
+      <span
+        (click)="more()"
+        role="button"
+        class="font-bold font-Raleway from-red bg-gradient-to-l to-orange bg-clip-text text-transparent"
+      >
+        see more....</span
+      >
+      }
     </p>
+    @if (readMore) {
+    <p
+      class="font-medium animation1 inline dark:text-slate-300 font-Raleway text-[16px] md:text-[18px]leading-[30px]"
+    >
+      I have a solid understanding of responsive design principles, UI/UX best
+      practices, and real-world problem-solving in the front-end world.
+      Currently, I’m expanding my skill set by diving into Back-End Development,
+      with the goal of becoming a well-rounded Full-Stack Developer. I'm always
+      excited to learn new technologies, explore performance optimizations, and
+      stay up-to-date with the latest trends in web development. If you're
+      looking for someone who’s detail-oriented, fast-learning, and truly enjoys
+      turning ideas into functional interfaces — you’re in the right place.
+
+      <span
+        (click)="less()"
+        role="button"
+        class="from-red bg-gradient-to-l to-orange text-transparent bg-clip-text font-bold font-Raleway"
+      >
+        see lese</span
+      >
+    </p>
+    }
 
     <h2 class="font-medium text-[40px] dark:text-white font-Poppins mt-5 mb-5">
       What I do!

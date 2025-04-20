@@ -21,6 +21,9 @@ export class CartComponent {
   @Input() 'darkColor': string;
 
   isDarkMode(): boolean {
-    return document.documentElement.classList.contains('dark');
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      return document.documentElement.classList.contains('dark');
+    }
+    return false; // أو القيمة اللي تناسب الوضع الافتراضي
   }
 }

@@ -19,9 +19,10 @@ import {
   stagger,
   group,
 } from '@angular/animations';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
-  imports: [ButtonModule, PasswordModule, CartComponent],
+  imports: [ButtonModule, PasswordModule, CartComponent, TranslatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
@@ -46,6 +47,7 @@ import {
   ],
 })
 export class HomeComponent {
+  readMore: boolean = false;
   data: Ido[] = [
     {
       color: '#FFEBD1',
@@ -75,4 +77,10 @@ export class HomeComponent {
       desc: 'I work with RESTful APIs and services, connecting front-end interfaces with real-time data. I use tools like RxJS for handling asynchronous data and building reactive applications in Angular.',
     },
   ];
+  more(): void {
+    this.readMore = !this.readMore;
+  }
+  less(): void {
+    this.readMore = !this.readMore;
+  }
 }

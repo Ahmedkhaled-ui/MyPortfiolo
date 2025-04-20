@@ -1,4 +1,8 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  importProvidersFrom,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import {
   provideRouter,
   withHashLocation,
@@ -9,10 +13,18 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 import { routes } from './app.routes';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+function translateFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '/I18n/', '.json');
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,7 +37,17 @@ export const appConfig: ApplicationConfig = {
     ),
     provideClientHydration(withEventReplay()),
     provideAnimationsAsync(),
-
+    provideHttpClient(withFetch()),
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        defaultLanguage: 'en',
+        loader: {
+          provide: TranslateLoader,
+          useFactory: translateFactory,
+          deps: [HttpClient],
+        },
+      })
+    ),
     providePrimeNG({
       theme: {
         preset: Aura,
