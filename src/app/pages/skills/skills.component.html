@@ -6,7 +6,7 @@
   <div [@skillAnimation] class="grid justify-center md:grid-cols-2 gap-5">
     @for (item of project; track $index) {
 
-    <a href="" class="animation">
+    <a target="_blank" [href]="item.link" class="animation">
       <p-card [style]="{ width: '20rem', overflow: 'hidden', background: '' }">
         <ng-template #header>
           <img
@@ -15,8 +15,8 @@
             [src]="item.image"
           />
         </ng-template>
-        <ng-template #title> project </ng-template>
-        <ng-template #subtitle> productoin soon </ng-template>
+        <ng-template class="!capitalize" #title> {{ item.title }} </ng-template>
+        <ng-template #subtitle> </ng-template>
       </p-card>
     </a>
     }

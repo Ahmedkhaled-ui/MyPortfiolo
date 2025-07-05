@@ -8,9 +8,10 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-personal-info',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './personal-info.component.html',
   styleUrl: './personal-info.component.css',
   animations: [

@@ -15,9 +15,10 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-list-option',
-  imports: [RouterLinkActive, RouterLink],
+  imports: [RouterLinkActive, RouterLink, TranslatePipe],
   templateUrl: './list-option.component.html',
   styleUrl: './list-option.component.css',
   animations: [

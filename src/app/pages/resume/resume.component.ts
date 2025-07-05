@@ -46,19 +46,22 @@ import {
 export class ResumeComponent {
   data: Ido[] = [
     {
-      color: '#FFE3BF',
-      darkColor: '#8F6B4B',
-      date: '📘 2023 / 2024',
-      head: 'Front-End Development ',
-      desc: 'Route Academy',
-    },
-    {
       color: '#FFEED9',
       darkColor: '#B48E6C',
       date: '💻 2024 / Present',
       head: 'Freelance Projects ',
       desc: 'Freelance Projects ',
     },
+    {
+      color: '#FFE3BF',
+      darkColor: '#8F6B4B',
+      date: '📘 2023 / 2024',
+      head: 'Front-End Development ',
+      desc: 'Route Academy',
+    },
+  ];
+
+  education: Ido[] = [
     {
       color: '#FFEED9',
       darkColor: '#B48E6C',

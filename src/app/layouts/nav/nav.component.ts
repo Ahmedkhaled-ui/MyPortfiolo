@@ -17,9 +17,10 @@ import {
   trigger,
 } from '@angular/animations';
 import { TranslateServices } from '../../core/services/translate/translate.service';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-nav',
-  imports: [ListOptionComponent],
+  imports: [ListOptionComponent, TranslatePipe],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
   animations: [

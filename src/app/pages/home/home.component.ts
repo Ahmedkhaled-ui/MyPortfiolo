@@ -29,15 +29,21 @@ import { TranslatePipe } from '@ngx-translate/core';
     trigger('animated', [
       transition(':enter', [
         group([
-          query('.animation1', [
+          query('.animation2', [
             style({ opacity: 0, transform: 'translateY(200px)' }),
+            stagger('200ms ease-out', [
+              animate(500, style({ opacity: 1, transform: 'translateY(0)' })),
+            ]),
+          ]),
+          query('.animation1', [
+            style({ opacity: 0, transform: 'translateY(-200px)' }),
             stagger('0ms ease-out', [
               animate(500, style({ opacity: 1, transform: 'translateY(0)' })),
             ]),
           ]),
           query('.animation', [
             style({ opacity: 1, transform: 'translateX(200px)' }),
-            stagger('300ms ease-out', [
+            stagger('0ms ease-out', [
               animate(500, style({ opacity: 1, transform: 'translateX(0)' })),
             ]),
           ]),
