@@ -11,14 +11,14 @@ import { PersonalInfoComponent } from './shared/components/ui/personal-info/pers
 })
 export class AppComponent {
   constructor() {
-    afterNextRender(() => {
-      document.documentElement.classList.toggle(
-        'dark',
-        localStorage.getItem('theme') === 'dark' ||
-          (!('theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)
-      );
-    });
+    // afterNextRender(() => {
+    //   document.documentElement.classList.toggle(
+    //     'dark',
+    //     localStorage.getItem('theme') === 'dark' ||
+    //       (!('theme' in localStorage) &&
+    //         window.matchMedia('(prefers-color-scheme: dark)').matches)
+    //   );
+    // });
   }
   title = 'myportfiolo';
 }
