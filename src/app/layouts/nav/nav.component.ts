@@ -44,7 +44,7 @@ export class NavComponent implements AfterViewInit {
   langIcon = false;
   constructor(private changeDetectorRef: ChangeDetectorRef) {
     afterNextRender(() => {
-      this.thems.set(localStorage.getItem('theme')!);
+      // this.thems.set(localStorage.getItem('theme')!);
       // console.log(this.thems());
       this.lang.set(localStorage.getItem('lang')!);
       if (localStorage.getItem('lang') == 'en') {
@@ -59,46 +59,45 @@ export class NavComponent implements AfterViewInit {
     });
   }
   mode() {
-    this.thems.set('dark');
-    localStorage.setItem('theme', 'dark');
-    document.documentElement.classList.toggle(
-      'dark',
-      localStorage.getItem('theme') === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-    );
+    // this.thems.set('dark');
+    // localStorage.setItem('theme', 'dark');
+    // document.documentElement.classList.toggle(
+    //   'dark',
+    //   localStorage.getItem('theme') === 'dark' ||
+    //     (!('theme' in localStorage) &&
+    //       window.matchMedia('(prefers-color-scheme: dark)').matches)
+    // );
   }
 
   ligthMode() {
-    this.thems.set('ligth');
-
-    localStorage.setItem('theme', 'ligth');
-    document.documentElement.classList.toggle(
-      'dark',
-      localStorage.getItem('theme') === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-    );
+    // this.thems.set('ligth');
+    // localStorage.setItem('theme', 'ligth');
+    // document.documentElement.classList.toggle(
+    //   'dark',
+    //   localStorage.getItem('theme') === 'dark' ||
+    //     (!('theme' in localStorage) &&
+    //       window.matchMedia('(prefers-color-scheme: dark)').matches)
+    // );
   }
 
-  langUse() {
-    if (this.lang() == 'en') {
-      this.langIcon = true;
-    } else if (this.lang() == 'ar') {
-      this.langIcon = true;
-    }
-  }
-  changeLang(): void {
-    this.langIcon = !this.langIcon;
-  }
-  typeLang(l: string): void {
-    if (l == 'en') {
-      console.log('en');
-      localStorage.setItem('lang', 'en');
-    } else {
-      console.log('ar');
-      localStorage.setItem('lang', 'ar');
-    }
-    this.translateServices.diraction();
-  }
+  // langUse() {
+  //   if (this.lang() == 'en') {
+  //     this.langIcon = true;
+  //   } else if (this.lang() == 'ar') {
+  //     this.langIcon = true;
+  //   }
+  // }
+  // changeLang(): void {
+  //   this.langIcon = !this.langIcon;
+  // }
+  // typeLang(l: string): void {
+  //   if (l == 'en') {
+  //     console.log('en');
+  //     localStorage.setItem('lang', 'en');
+  //   } else {
+  //     console.log('ar');
+  //     localStorage.setItem('lang', 'ar');
+  //   }
+  //   this.translateServices.diraction();
+  // }
 }
