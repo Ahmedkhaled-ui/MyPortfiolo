@@ -57,11 +57,11 @@ export class PersonalInfoComponent {
   ];
 
   email: string = 'ahmedkamel1446@gmail.com';
-  cv: string = './resume/Ahmed_Khaled_CV.pdf';
+  cv: string = './resume/Ahmed_Khaled_resume.pdf';
   downloadCV() {
     const link = document.createElement('a');
     link.href = this.cv;
-    link.setAttribute('download', 'Ahmed-CV.pdf');
+    link.setAttribute('download', 'Ahmed-resume.pdf');
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();

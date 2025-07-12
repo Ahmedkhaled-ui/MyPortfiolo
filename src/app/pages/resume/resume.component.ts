@@ -48,14 +48,14 @@ export class ResumeComponent {
     {
       color: '#FFEED9',
       darkColor: '#B48E6C',
-      date: '💻 2024 / Present',
+      date: '💻 2023 / Present',
       head: 'Freelance Projects ',
       desc: 'Freelance Projects ',
     },
     {
       color: '#FFE3BF',
       darkColor: '#8F6B4B',
-      date: '📘 2023 / 2024',
+      date: '📘 2022 / 2023',
       head: 'Front-End Development ',
       desc: 'Route Academy',
     },
@@ -72,7 +72,7 @@ export class ResumeComponent {
     {
       color: '#FFE3BF',
       darkColor: '#8F6B4B',
-      date: '💻 2023 / 2024',
+      date: '💻 2022 / 2023',
       head: 'Route  Projects ',
       desc: 'Projects ',
     },
@@ -104,6 +104,12 @@ export class ResumeComponent {
     },
     {
       wSkill: 'BootStrape ',
+    },
+    {
+      wSkill: 'Sql ',
+    },
+    {
+      wSkill: 'C# ',
     },
   ];
   sSkills: IworkSkills[] = [

@@ -18,7 +18,7 @@ import {
 import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-list-option',
-  imports: [RouterLinkActive, RouterLink, TranslatePipe],
+  imports: [RouterLinkActive, RouterLink],
   templateUrl: './list-option.component.html',
   styleUrl: './list-option.component.css',
   animations: [
